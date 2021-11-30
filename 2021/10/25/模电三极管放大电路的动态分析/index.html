@@ -21,25 +21,25 @@
   <meta name="description" content="关于三极管放大电路的简单分析动态分析（1）图解分析法  （2）微变等效电路法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="模电三极管放大电路的动态分析">
-<meta property="og:url" content="http://example.com/2021/10/25/%E6%A8%A1%E7%94%B5%E4%B8%89%E6%9E%81%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:url" content="http://dynsmok.github.io/2021/10/25/%E6%A8%A1%E7%94%B5%E4%B8%89%E6%9E%81%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/index.html">
+<meta property="og:site_name" content="Dynsmok">
 <meta property="og:description" content="关于三极管放大电路的简单分析动态分析（1）图解分析法  （2）微变等效电路法">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2021/10/25/%E6%A8%A1%E7%94%B5%E4%B8%89%E6%9E%81%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/Snipaste_2021-10-21_20-22-13.png">
-<meta property="og:image" content="http://example.com/2021/10/25/%E6%A8%A1%E7%94%B5%E4%B8%89%E6%9E%81%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/Snipaste2.png">
-<meta property="og:image" content="http://example.com/2021/10/25/%E6%A8%A1%E7%94%B5%E4%B8%89%E6%9E%81%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/Snipaste3.png">
-<meta property="og:image" content="http://example.com/2021/10/25/%E6%A8%A1%E7%94%B5%E4%B8%89%E6%9E%81%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/4.png">
-<meta property="og:image" content="http://example.com/2021/10/25/%E6%A8%A1%E7%94%B5%E4%B8%89%E6%9E%81%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/5.png">
+<meta property="og:image" content="http://dynsmok.github.io/2021/10/25/%E6%A8%A1%E7%94%B5%E4%B8%89%E6%9E%81%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/Snipaste_2021-10-21_20-22-13.png">
+<meta property="og:image" content="http://dynsmok.github.io/2021/10/25/%E6%A8%A1%E7%94%B5%E4%B8%89%E6%9E%81%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/Snipaste2.png">
+<meta property="og:image" content="http://dynsmok.github.io/2021/10/25/%E6%A8%A1%E7%94%B5%E4%B8%89%E6%9E%81%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/Snipaste3.png">
+<meta property="og:image" content="http://dynsmok.github.io/2021/10/25/%E6%A8%A1%E7%94%B5%E4%B8%89%E6%9E%81%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/4.png">
+<meta property="og:image" content="http://dynsmok.github.io/2021/10/25/%E6%A8%A1%E7%94%B5%E4%B8%89%E6%9E%81%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/5.png">
 <meta property="article:published_time" content="2021-10-25T12:12:58.000Z">
 <meta property="article:modified_time" content="2021-11-26T15:31:41.935Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="Dynsmok">
 <meta property="article:tag" content="模电">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2021/10/25/%E6%A8%A1%E7%94%B5%E4%B8%89%E6%9E%81%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/Snipaste_2021-10-21_20-22-13.png">
+<meta name="twitter:image" content="http://dynsmok.github.io/2021/10/25/%E6%A8%A1%E7%94%B5%E4%B8%89%E6%9E%81%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/Snipaste_2021-10-21_20-22-13.png">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://example.com/2021/10/25/%E6%A8%A1%E7%94%B5%E4%B8%89%E6%9E%81%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/index.html">
+  <link rel="canonical" href="http://dynsmok.github.io/2021/10/25/%E6%A8%A1%E7%94%B5%E4%B8%89%E6%9E%81%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/index.html">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Dynsmok" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.jpg" type="image/x-icon">
@@ -191,7 +191,7 @@
     	
         <li><a href="https://github.com/dynsmok" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
         
-        <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        <li><a href="/null" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
         
         <li><a href="https://twitter.com/iwebued" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
         
@@ -396,7 +396,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://example.com/2021/10/25/%E6%A8%A1%E7%94%B5%E4%B8%89%E6%9E%81%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/" title="模电三极管放大电路的动态分析" target="_blank" rel="external">http://example.com/2021/10/25/模电三极管放大电路的动态分析/</a>
+      <a href="http://dynsmok.github.io/2021/10/25/%E6%A8%A1%E7%94%B5%E4%B8%89%E6%9E%81%E7%AE%A1%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF%E7%9A%84%E5%8A%A8%E6%80%81%E5%88%86%E6%9E%90/" title="模电三极管放大电路的动态分析" target="_blank" rel="external">http://dynsmok.github.io/2021/10/25/模电三极管放大电路的动态分析/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -523,7 +523,7 @@
     	
         <li><a href="https://github.com/dynsmok" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
         
-        <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        <li><a href="/null" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
         
         <li><a href="https://twitter.com/iwebued" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
         

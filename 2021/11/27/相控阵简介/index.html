@@ -18,12 +18,12 @@
   
   
   <title>相控阵简介 | Dynsmok</title>
-  <meta name="description" content="相控阵简介基本原理：同相叠加。设定扫描角度，馈电相位差抵消空间相位差。 ###一般阵列，均匀直线阵以及均匀面阵      128元均匀直线阵，假设等幅分布，单元为全向天线，从-45度扫描到+45度 代码如下： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152">
+  <meta name="description" content="相控阵简介基本原理：同相叠加。设定扫描角度，馈电相位差抵消空间相位差。###一般阵列，均匀直线阵以及均匀面阵      128元均匀直线阵，假设等幅分布，单元为全向天线，从-45度扫描到+45度,并找出副瓣大小与3db带宽 MATLAB代码如下： 1234567891011121314151617181920212223242526272829303132333435363738394041424">
 <meta property="og:type" content="article">
 <meta property="og:title" content="相控阵简介">
 <meta property="og:url" content="http://dynsmok.github.io/2021/11/27/%E7%9B%B8%E6%8E%A7%E9%98%B5%E7%AE%80%E4%BB%8B/index.html">
 <meta property="og:site_name" content="Dynsmok">
-<meta property="og:description" content="相控阵简介基本原理：同相叠加。设定扫描角度，馈电相位差抵消空间相位差。 ###一般阵列，均匀直线阵以及均匀面阵      128元均匀直线阵，假设等幅分布，单元为全向天线，从-45度扫描到+45度 代码如下： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152">
+<meta property="og:description" content="相控阵简介基本原理：同相叠加。设定扫描角度，馈电相位差抵消空间相位差。###一般阵列，均匀直线阵以及均匀面阵      128元均匀直线阵，假设等幅分布，单元为全向天线，从-45度扫描到+45度,并找出副瓣大小与3db带宽 MATLAB代码如下： 1234567891011121314151617181920212223242526272829303132333435363738394041424">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://dynsmok.github.io/2021/11/27/%E7%9B%B8%E6%8E%A7%E9%98%B5%E7%AE%80%E4%BB%8B/5.png">
 <meta property="og:image" content="http://dynsmok.github.io/2021/11/27/%E7%9B%B8%E6%8E%A7%E9%98%B5%E7%AE%80%E4%BB%8B/6.png">
@@ -31,7 +31,7 @@
 <meta property="og:image" content="http://dynsmok.github.io/2021/11/27/%E7%9B%B8%E6%8E%A7%E9%98%B5%E7%AE%80%E4%BB%8B/8.png">
 <meta property="og:image" content="http://dynsmok.github.io/2021/11/27/%E7%9B%B8%E6%8E%A7%E9%98%B5%E7%AE%80%E4%BB%8B/9.png">
 <meta property="article:published_time" content="2021-11-27T03:36:22.788Z">
-<meta property="article:modified_time" content="2021-11-27T03:46:30.169Z">
+<meta property="article:modified_time" content="2021-12-12T15:45:32.121Z">
 <meta property="article:author" content="Dynsmok">
 <meta property="article:tag" content="天线笔记">
 <meta name="twitter:card" content="summary">
@@ -228,7 +228,7 @@
   <div class="widget">
     <h3 class="widget-title">标签</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A9%E7%BA%BF%E7%AC%94%E8%AE%B0/" rel="tag">天线笔记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%84%E9%A2%91/" rel="tag">射频</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A8%A1%E7%94%B5/" rel="tag">模电</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/" rel="tag">生活记录</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A9%E7%BA%BF%E7%AC%94%E8%AE%B0/" rel="tag">天线笔记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%84%E9%A2%91/" rel="tag">射频</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A8%A1%E7%94%B5/" rel="tag">模电</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/" rel="tag">生活记录</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -238,7 +238,7 @@
   <div class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/%E5%A4%A9%E7%BA%BF%E7%AC%94%E8%AE%B0/" style="font-size: 13px;">天线笔记</a> <a href="/tags/%E5%B0%84%E9%A2%91/" style="font-size: 13px;">射频</a> <a href="/tags/%E6%A8%A1%E7%94%B5/" style="font-size: 13px;">模电</a> <a href="/tags/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/" style="font-size: 13px;">生活记录</a>
+      <a href="/tags/%E5%A4%A9%E7%BA%BF%E7%AC%94%E8%AE%B0/" style="font-size: 13px;">天线笔记</a> <a href="/tags/%E5%B0%84%E9%A2%91/" style="font-size: 14px;">射频</a> <a href="/tags/%E6%A8%A1%E7%94%B5/" style="font-size: 13px;">模电</a> <a href="/tags/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/" style="font-size: 13px;">生活记录</a>
     </div>
   </div>
 
@@ -247,7 +247,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">十一月 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">十二月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">十一月 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -259,6 +259,21 @@
     <div class="widget-body">
       <ul class="recent-post-list list-unstyled no-thumbnail">
         
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2021/12/12/%E5%B9%B3%E8%A1%A1%E5%BC%8F%E5%8A%9F%E7%8E%87%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/" class="title">平衡式功率放大电路</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-12-12T15:48:15.000Z" itemprop="datePublished">2021-12-12</time>
+              </p>
+            </div>
+          </li>
+          
           <li>
             
             <div class="item-inner">
@@ -319,21 +334,6 @@
             </div>
           </li>
           
-          <li>
-            
-            <div class="item-inner">
-              <p class="item-category">
-                
-              </p>
-              <p class="item-title">
-                <a href="/2021/10/22/hello-world/" class="title">Hello World</a>
-              </p>
-              <p class="item-date">
-                <time datetime="2021-10-22T14:06:26.426Z" itemprop="datePublished">2021-10-22</time>
-              </p>
-            </div>
-          </li>
-          
       </ul>
     </div>
   </div>
@@ -376,22 +376,28 @@
 
         
 
+	<span class="article-read hidden-xs">
+    	<i class="icon icon-eye-fill" aria-hidden="true"></i>
+    	<span id="/2021/11/27/%E7%9B%B8%E6%8E%A7%E9%98%B5%E7%AE%80%E4%BB%8B/" class="leancloud_visitors"  data-flag-title="相控阵简介">
+			<span class="leancloud-visitors-count">0</span>
+		</span>
+    </span>
+
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/11/27/%E7%9B%B8%E6%8E%A7%E9%98%B5%E7%AE%80%E4%BB%8B/#comments" class="article-comment-link">评论</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h1 id="相控阵简介"><a href="#相控阵简介" class="headerlink" title="相控阵简介"></a>相控阵简介</h1><p>基本原理：同相叠加。设定扫描角度，馈电相位差抵消空间相位差。</p>
-<h2 id="一般阵列，均匀直线阵以及均匀面阵"><a href="#一般阵列，均匀直线阵以及均匀面阵" class="headerlink" title="###一般阵列，均匀直线阵以及均匀面阵"></a>###一般阵列，均匀直线阵以及均匀面阵</h2><img src="./5.png"  />
+        <h1 id="相控阵简介"><a href="#相控阵简介" class="headerlink" title="相控阵简介"></a>相控阵简介</h1><h2 id="基本原理：同相叠加。设定扫描角度，馈电相位差抵消空间相位差。"><a href="#基本原理：同相叠加。设定扫描角度，馈电相位差抵消空间相位差。" class="headerlink" title="基本原理：同相叠加。设定扫描角度，馈电相位差抵消空间相位差。"></a>基本原理：同相叠加。设定扫描角度，馈电相位差抵消空间相位差。</h2><h2 id="一般阵列，均匀直线阵以及均匀面阵"><a href="#一般阵列，均匀直线阵以及均匀面阵" class="headerlink" title="###一般阵列，均匀直线阵以及均匀面阵"></a>###一般阵列，均匀直线阵以及均匀面阵</h2><img src="./5.png"  />
 
 <p><img src="./6.png"></p>
 <p><img src="./7.png"></p>
 <p><img src="./8.png"></p>
 <p><img src="./9.png"></p>
-<p>128元均匀直线阵，假设等幅分布，单元为全向天线，从-45度扫描到+45度</p>
-<p>代码如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">clc;</span><br><span class="line">close all</span><br><span class="line">clear all;</span><br><span class="line">lambda=0.5; %波长</span><br><span class="line">d=0.4*lambda; %阵元间距</span><br><span class="line">N=128; %阵元数量</span><br><span class="line">dm=(0:N-1).*d;</span><br><span class="line">theta=-pi/3:0.005*pi:pi/3;</span><br><span class="line">%% 均匀直线阵列</span><br><span class="line">% theta0=[0,10,20,30,45];% 度</span><br><span class="line">theta0=-45:2:45;</span><br><span class="line">for a=1:length(theta0)</span><br><span class="line">b=1j*2*pi/lambda*dm;</span><br><span class="line">for i=1:length(theta)</span><br><span class="line">    F(i)=sum(exp(b* (sin(theta(i))-sin(theta0(a)/180*pi)) )); %阵列方向图函数</span><br><span class="line">%     F(i)=0</span><br><span class="line">%     for k=0:N-1</span><br><span class="line">%         F(i)=F(i)+exp(2*pi*1j*k*d/lambda*sin(theta(i)));</span><br><span class="line">%     end</span><br><span class="line">%     F(i)=1;</span><br><span class="line">end</span><br><span class="line"> </span><br><span class="line">for k=1:length(theta)%幅值</span><br><span class="line">    AF(k)= abs(F(k)) </span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% sum=abs(cos(theta).^0.5.*F);</span><br><span class="line">% sum=sum/N</span><br><span class="line"></span><br><span class="line">AFmax=max(AF);</span><br><span class="line">AFmaxdb=10*log10(AFmax);%最大值</span><br><span class="line"></span><br><span class="line">% pusai=2*pi/lambda*d*cos(theta);</span><br><span class="line">% </span><br><span class="line">% AF=sin(N/2*pusai)./sin(pusai/2);</span><br><span class="line">% 绘图</span><br><span class="line">subplot(1,2,1)</span><br><span class="line">plot(theta, 10*log10(AF)-AFmaxdb);</span><br><span class="line">title(&#x27;直角坐标方向图&#x27;)</span><br><span class="line"> xlabel(&#x27;\theta&#x27;) </span><br><span class="line"> ylabel(&#x27;归一化阵列增益/dB&#x27;)</span><br><span class="line"> </span><br><span class="line">subplot(1,2,2)</span><br><span class="line">polar(theta, AF/AFmax, &#x27;-r&#x27;);</span><br><span class="line">% rlim([-50 0])                                         % 设置半径范围</span><br><span class="line">% rticks([-40 -25 -10])								    % 显示刻度</span><br><span class="line">% rticklabels(&#123;&#x27;r =-40&#x27;,&#x27;r =-25&#x27;,&#x27;r =-10&#x27;&#125;)		    % 在刻度线处加标记</span><br><span class="line">% legend(&#x27;Fixed UAV location at (0,6,200)&#x27;)</span><br><span class="line">% 标题标注 </span><br><span class="line">title(&#x27;极坐标方向图&#x27;) </span><br><span class="line">% 坐标轴标注 </span><br><span class="line"> xlabel(&#x27;\theta&#x27;) </span><br><span class="line"> ylabel(&#x27;归一化阵列增益&#x27;)</span><br><span class="line"> pause(0.1);</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<p>128元均匀直线阵，假设等幅分布，单元为全向天线，从-45度扫描到+45度,并找出副瓣大小与3db带宽</p>
+<p>MATLAB代码如下：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">clc;</span><br><span class="line">close all</span><br><span class="line">clear all;</span><br><span class="line">lambda=<span class="number">0.5</span>; <span class="comment">%波长</span></span><br><span class="line">d=<span class="number">0.5</span>*lambda; <span class="comment">%阵元间距</span></span><br><span class="line">N=<span class="number">20</span>; <span class="comment">%阵元数量</span></span><br><span class="line">dm=(<span class="number">0</span>:N<span class="number">-1</span>).*d;</span><br><span class="line">theta=-<span class="built_in">pi</span>:<span class="number">0.0001</span>*<span class="built_in">pi</span>:<span class="built_in">pi</span>;</span><br><span class="line"><span class="comment">%% 均匀直线阵列</span></span><br><span class="line">theta0=[<span class="number">0</span>,<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">45</span>];<span class="comment">% 扫描角度</span></span><br><span class="line">L=<span class="built_in">length</span>(theta0);</span><br><span class="line"><span class="comment">% theta0=-45:2:45;</span></span><br><span class="line"><span class="keyword">for</span> a=<span class="number">1</span>:L</span><br><span class="line">b=<span class="number">1</span><span class="built_in">j</span>*<span class="number">2</span>*<span class="built_in">pi</span>/lambda*dm;</span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">1</span>:<span class="built_in">length</span>(theta)</span><br><span class="line">    F(<span class="built_in">i</span>)=sum(<span class="built_in">exp</span>(b* (<span class="built_in">sin</span>(theta(<span class="built_in">i</span>))-<span class="built_in">sin</span>(theta0(a)/<span class="number">180</span>*<span class="built_in">pi</span>)) )); <span class="comment">%阵列方向图函数</span></span><br><span class="line"><span class="comment">%     F(i)=0</span></span><br><span class="line"><span class="comment">%     for k=0:N-1</span></span><br><span class="line"><span class="comment">%         F(i)=F(i)+exp(2*pi*1j*k*d/lambda*sin(theta(i)));</span></span><br><span class="line"><span class="comment">%     end</span></span><br><span class="line"><span class="comment">%     F(i)=1;</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">for</span> k=<span class="number">1</span>:<span class="built_in">length</span>(theta)</span><br><span class="line">    AF(k)= <span class="built_in">abs</span>(F(k));<span class="comment">%幅值</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">% sum=abs(cos(theta).^0.5.*F);</span></span><br><span class="line"><span class="comment">% sum=sum/N</span></span><br><span class="line"></span><br><span class="line">AFmax=<span class="built_in">max</span>(AF);</span><br><span class="line">AFmaxdb=<span class="number">10</span>*<span class="built_in">log10</span>(AFmax);<span class="comment">%最大值转db</span></span><br><span class="line">AFdb=<span class="number">10</span>*<span class="built_in">log10</span>(AF)-AFmaxdb;<span class="comment">%归一化</span></span><br><span class="line"><span class="comment">% pusai=2*pi/lambda*d*cos(theta);</span></span><br><span class="line"><span class="comment">% </span></span><br><span class="line"><span class="comment">% AF=sin(N/2*pusai)./sin(pusai/2);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%% 绘图</span></span><br><span class="line"><span class="built_in">figure</span>;</span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>)</span><br><span class="line"><span class="built_in">plot</span>(theta.*<span class="number">180</span>/<span class="built_in">pi</span>, AFdb);</span><br><span class="line">title(<span class="string">&#x27;直角坐标方向图&#x27;</span>)</span><br><span class="line"> xlabel(<span class="string">&#x27;\theta&#x27;</span>) </span><br><span class="line"> ylabel(<span class="string">&#x27;归一化阵列增益/dB&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"><span class="comment">%副瓣查找</span></span><br><span class="line"> <span class="built_in">hold</span> on;</span><br><span class="line"> xlim([<span class="number">-180</span> <span class="number">180</span>]);</span><br><span class="line">[y0,x0] = findpeaks(AFdb);<span class="comment">%找出峰值</span></span><br><span class="line">xx=x0.*<span class="number">0.0001</span>*<span class="number">180</span><span class="number">-180</span>;<span class="comment">%副瓣横坐标单位为度</span></span><br><span class="line"><span class="built_in">plot</span>(xx,y0,<span class="string">&#x27;ro&#x27;</span>);<span class="comment">%副瓣标红点</span></span><br><span class="line"><span class="comment">% text(x0+1,y0-0.1,num2str(y0,&#x27;幅值=%f&#x27;));%   在图形中指定的位置(x,y)上显示字符串string</span></span><br><span class="line">fuban&#123;a,:&#125;=y0;<span class="comment">%记录五次扫描的幅瓣值</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%-3db主瓣宽度查找</span></span><br><span class="line"><span class="built_in">hold</span> on;</span><br><span class="line">[sA,index] = <span class="built_in">sort</span>(<span class="built_in">abs</span>(AFdb+<span class="number">3</span>));<span class="comment">%排序找出最接近的索引</span></span><br><span class="line">n=<span class="number">4</span>;<span class="comment">%找n个最接近的值</span></span><br><span class="line">y3db=AFdb(index(<span class="number">1</span>:n));<span class="comment">%求出幅值(db)</span></span><br><span class="line">index=index.*<span class="number">0.0001</span>*<span class="number">180</span><span class="number">-180</span>;<span class="comment">%转换成角度</span></span><br><span class="line">x3db=index(<span class="number">1</span>:n);<span class="comment">%-3db处的横坐标保存</span></span><br><span class="line"><span class="built_in">plot</span>(x3db,y3db,<span class="string">&#x27;bo&#x27;</span>);<span class="comment">%-3db处标蓝圈</span></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">1</span>:n</span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">j</span>=<span class="number">1</span>:n</span><br><span class="line">    BW(<span class="built_in">i</span>,<span class="built_in">j</span>)=<span class="built_in">abs</span>(x3db(<span class="built_in">i</span>)-x3db(<span class="built_in">j</span>));<span class="comment">%-3db带宽计算</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">BWmin=<span class="built_in">min</span>(<span class="built_in">min</span>(BW(BW~=<span class="number">0</span>)));</span><br><span class="line">BW3db&#123;a,:&#125;=BWmin;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>)</span><br><span class="line">polar(theta, AF/AFmax, <span class="string">&#x27;-r&#x27;</span>);</span><br><span class="line"><span class="comment">% rlim([-50 0])                                         % 设置半径范围</span></span><br><span class="line"><span class="comment">% rticks([-40 -25 -10])								% 在r=-40、-25、-10处显示刻度</span></span><br><span class="line"><span class="comment">% rticklabels(&#123;&#x27;r =-40&#x27;,&#x27;r =-25&#x27;,&#x27;r =-10&#x27;&#125;)		    % 在刻度线处加标记</span></span><br><span class="line"><span class="comment">% legend(&#x27;Fixed UAV location at (0,6,200)&#x27;)</span></span><br><span class="line"><span class="comment">% 标题标注 </span></span><br><span class="line">title(<span class="string">&#x27;极坐标方向图&#x27;</span>) </span><br><span class="line"><span class="comment">% 坐标轴标注 </span></span><br><span class="line"> xlabel(<span class="string">&#x27;\theta&#x27;</span>) </span><br><span class="line"> ylabel(<span class="string">&#x27;归一化阵列增益&#x27;</span>)</span><br><span class="line"> pause(<span class="number">0.1</span>);</span><br><span class="line"> </span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 
 
 
@@ -449,6 +455,10 @@
   <div class="bar-inner">
   
   <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2021/12/12/%E5%B9%B3%E8%A1%A1%E5%BC%8F%E5%8A%9F%E7%8E%87%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/" title="平衡式功率放大电路"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
     
     
     <li class="next">
@@ -601,10 +611,10 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
     appId: 'FOUf2r0P4srd5xPoU26fgo8N-gzGzoHsz',
     appKey: '9ghaCsbOJGGlRu2CTdi8I1Af',
     placeholder: 'Just go go',
-    avatar: 'mm# gravatar style',
+    avatar: 'mp',
     meta: meta,
     pageSize: '10' || 10,
-    visitor: false
+    visitor: true
   });
   </script>
 
